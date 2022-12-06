@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1670328414364' stop='1670328414999'>
+    <name>login into playcode</name>
+    <title>login into playcode</title>
+    <test-cases>
+        <test-case start='1670328414364' status='broken' stop='1670328414998'>
+            <name>should login with valid credentials</name>
+            <title>should login with valid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-108.0.5359.94'/>
+            </parameters>
+            <steps>
+                <step start='1670328414366' status='passed' stop='1670328414673'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='b4778336-5baa-4cbb-8572-ec735632d626-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1670328414674' status='passed' stop='1670328414998'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='0638eb2f-b75c-4733-aa73-f1b24b04a2ed-attachment.png' type='image/png' size='21459'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>wait is not defined</message>
+                <stack-trace>ReferenceError: wait is not defined
+                    at Context.&lt;anonymous> (/Users/nick/programming/wdioTS_playcode_test_automation/test/specs/example.e2e.js:21:9)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
