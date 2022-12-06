@@ -1,3 +1,3 @@
 # wdioTS_playcode_test_automation
 
-some test case
+joint project on js interpreter automation
