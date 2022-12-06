@@ -17,7 +17,8 @@ const SecurePage = require('../pageobjects/secure.page')
 describe('login into playcode', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open()
-
+        await LoginPage.login()
         // need to add sleep ... 
+        // selector review
     })
 })
