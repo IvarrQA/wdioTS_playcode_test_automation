@@ -21,7 +21,7 @@ class EditorPage extends Page {
      * e.g. to type some code into the editor
      */
     async enterCode (codeValueString) {
-        await this.editorTextArea.addValue(codeValueString); // ??? docs
+        await this.editorTextArea.addValue(codeValueString);
     }
 
     /**
