@@ -4,11 +4,11 @@ const JSEditor = require('../pageobjects/emptyJavascriptEditor.page')
 describe('input simple js code into playcode javascript editor', () => {
 
     beforeEach( async () => {
-        
+        // pass
     })
 
     afterEach( async () => {
-        //await browser.closeWindow()
+        await browser.reloadSession()
     })
 
     it('should log only the first string value of \
@@ -23,12 +23,11 @@ describe('input simple js code into playcode javascript editor', () => {
             }
         );
         await expect(JSEditor.outputConsoleFirstValue).toHaveTextContaining('some test')
-        //await browser.closeWindow()
     })
 
     it('should log a sequential result of code execution \
         by outputting a set of values', async () => {
-            //await JSEditor.open()
+            await JSEditor.open()
             await JSEditor.enterCode(
                 "\nconsole.log('first value')\nconsole.log('second value')"
             )
