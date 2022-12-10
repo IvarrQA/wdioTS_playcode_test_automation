@@ -3,16 +3,15 @@ const Page = require('./page');
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class EditorPage extends Page {
+class EmptyJavascriptEditorPage extends Page {
     /**
      * define selectors using getter methods
      */
-
     get editorTextArea () {
         return $('.inputarea');
     }
 
-    get outputConsole () {
+    get outputConsoleFirstValue () {
         return $('//*[@id="app"]/div/div[1]/div/div[2]/div[2]/div/div[3]/div/div[2]/div/div[2]/div/div/div[1]/div/div/div/div/div/span')
     }
 
@@ -20,8 +19,8 @@ class EditorPage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to type some code into the editor
      */
-    async enterCode (codeValueString) {
-        await this.editorTextArea.addValue(codeValueString);
+    async enterCode (code_string) {
+        await this.editorTextArea.addValue(code_string);
     }
 
     /**
@@ -32,4 +31,4 @@ class EditorPage extends Page {
     }
 }
 
-module.exports = new EditorPage();
+module.exports = new EmptyJavascriptEditorPage();
