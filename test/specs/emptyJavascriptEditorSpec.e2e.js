@@ -15,13 +15,14 @@ describe('input simple js code into playcode javascript editor', () => {
         the result of code execution with valid credentials', async () => {
         await JSEditor.open()
         await JSEditor.enterCode("console.log('some test')")
-        await browser.waitUntil(
-            async () => JSEditor.outputConsoleFirstValue.isExisting(),
-            {
-                timeout: 5000,
-                timeoutMsg: 'expected element is not exists after 5s'
-            }
-        );
+        await JSEditor.outputConsoleFirstValue.waitForExist()
+        // await browser.waitUntil(
+        //     async () => JSEditor.outputConsoleFirstValue.isExisting(),
+        //     {
+        //         timeout: 5000,
+        //         timeoutMsg: 'expected element is not exists after 5s'
+        //     }
+        // );
         await expect(JSEditor.outputConsoleFirstValue).toHaveTextContaining('some test')
     })
 
@@ -34,9 +35,3 @@ describe('input simple js code into playcode javascript editor', () => {
             await browser.pause(5000)
     })
 })
-
-
-    
-
-
-

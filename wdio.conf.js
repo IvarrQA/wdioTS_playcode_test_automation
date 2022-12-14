@@ -72,7 +72,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
@@ -249,7 +249,9 @@ exports.config = {
     afterTest: async function(test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             //await browser.takeScreenshot();
-            console.log('takeScreenshot');
+            console.log("################################");
+            console.log(result.result);
+            console.log("################################");
         }
     },
 
